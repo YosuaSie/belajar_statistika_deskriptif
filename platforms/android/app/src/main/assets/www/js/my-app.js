@@ -4260,7 +4260,7 @@ $$(document).on('page:init', function (e, page) {
 			//console.log("test");
 			//your_func(); 
 			page.router.navigate('/materi/');	
-		}, 3000);
+		}, 1000);
 
 	}
 	else if(page.name == "materi"){	
