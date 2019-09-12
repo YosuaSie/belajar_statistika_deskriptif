@@ -1,0 +1,237 @@
+<!--Dynamic Page -->
+<div class="page" data-name="olah-data">
+<div class="page-content hide-navbar-on-scroll">
+<!-- MENU-->
+<div class="menu hamburger-menu">
+  <div class="menu-inner">
+    <div class="menu-item menu-item-dropdown hamburger-menu">
+      <div class="menu-item-content hamburger-menu"><h1 style="color: white; font-weight: bold; margin: 0px;">≡</h1></div>
+      <div class="menu-dropdown menu-dropdown-left hamburger-menu">
+        <div class="menu-dropdown-content hamburger-menu">
+          <a href="/materi/" class="menu-dropdown-link menu-close">Materi</a>
+          <a href="/latihan-soal/" class="menu-dropdown-link menu-close">Latihan Soal</a>
+          <a href="/ruang-uji/" class="menu-dropdown-link menu-close">Ruang Uji</a>
+          <a href="/olah-data/" class="menu-dropdown-link menu-close">Olah Data</a>
+          <div class="menu-dropdown-divider" style="background-color:lightgray;"></div>
+          <a href="/cara-penggunaan/" class="menu-dropdown-link menu-close">Cara Penggunaan</a>
+          <a href="/pengaturan/" class="menu-dropdown-link menu-close">Pengaturan</a>
+          <a href="/tentang-aplikasi/" class="menu-dropdown-link menu-close">Tentang Aplikasi</a>
+        </div>
+      </div>
+    </div>
+    <div class="menu-item menu-item-dropdown hamburger-menu">
+      <div class="menu-item-content hamburger-menu title"><h4 style="color:white; width: 110%;">Olah Data</h4></div>
+    </div>
+  </div>
+</div>
+
+<!-- wadah padding -->
+<div id="wadahOD" style="padding-top:0px" class="page-content">
+<div class="block ikonChevron" style="margin-top:0px;">
+  <!-- PENJELASAN MATERI -->
+  <div id="penjelasan-materi">
+  <ul id="penjelasan-materi">
+    <!-- Pilih Jenis Inputan -->
+    <li>
+    <table class="od-radio" id="od-radio">
+      <tr>
+        <td colspan="4">Sifat data:</td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="od-rdb-qty" name="sifat-data" value="kuantitatif" checked>Kuantitatif</td>
+        <td><input type="radio" id="od-rdb-qlty" name="sifat-data" value="kualitatif">Kualitatif</td>
+      </tr>
+      <tr class="kuanti">
+        <td colspan="4">Jenis data:</td>
+      </tr>
+      <tr class="kuanti">
+        <td><input type="radio" id="od-rdb-tunggal" name="jenis-data" value="tunggal" checked>Tunggal</td>
+        <td><input type="radio" id="od-rdb-berkelompok" name="jenis-data" value="berkelompok">Berkelompok</td>
+      </tr>
+      <tr class="kuanti">
+        <td colspan="4">Jenis variabel:</td>
+      </tr>
+      <tr class="kuanti">
+        <td><input type="radio" id="od-rdb-diskrit" name="jenis-variabel" value="diskrit" checked>Diskrit</td>
+        <td><input type="radio" id="od-rdb-kontinu" name="jenis-variabel" value="kontinu">Kontinu</td>
+      </tr>
+      <tr>
+        <td colspan="4">Sudah tahu frekuensi:</td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="od-rdb-belum" name="frekuensi" value="belum" checked>Belum</td>
+        <td><input type="radio" id="od-rdb-sudah" name="frekuensi" value="sudah">Sudah</td>
+      </tr>
+    </table>
+    </li>
+    <!-- Pilih letak kuartil -->
+    <div class="kuanti">
+    <li><b>- Isi inputan di bawah jika diperlukan -</b></li>
+    <li>
+    <table class="kuartil-radio" id="kuartil-radio">
+      <tr>
+        <td colspan="4">Letak Kuartil</td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="od-kuartilQ1" name="od-letak-kuartil" value="Q1" checked>Q1</td>
+        <td><input type="radio" id="od-kuartilQ2" name="od-letak-kuartil" value="Q2">Q2</td>
+        <td><input type="radio" id="od-kuartilQ3" name="od-letak-kuartil" value="Q3">Q3</td>
+      </tr>
+    </table>
+    </li>
+    <li id="odDesilKontainerInput">Letak Desil:
+      &nbsp;<input type="number" min="1" step="1" max="9" id="od-letak-desil" name="letak-desil" value="1">
+    </li>
+    <li id="odPersentilKontainerInput">Letak Persentil:
+      &nbsp;<input type="number" min="1" step="1" max="99" id="od-letak-persentil" name="letak-persentil" value="10">
+    </li>
+    <li>
+    <table class="upd-radio" id="upd-radio">
+      <tr>
+        <td colspan="4">Pengamatan:</td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="updSampel" name="pengamatan-upd" value="sampel" checked>Sampel</td>
+        <td><input type="radio" id="updPopulasi" name="pengamatan-upd" value="populasi">Populasi</td>
+      </tr>
+    </table>
+    </li>
+    </div>
+    <!-- INPUTAN -->
+    <!-- belum tahu frekuensi-->
+    <li>
+      <div id="odKontainerTextArea" style="display: none;">
+        <textarea rows="4" id="odTextArea" name="odTextArea" placeholder="data;data;data"></textarea>
+      </div>
+    </li>
+    <!-- sudah tahu frekuensi, tunggal -->
+    <li>
+    <div style="display:none" id="odTabelTunggal">
+      <table class="odTabelTunggal">
+        <thead>
+          <tr>
+            <td>Variabel</td>
+            <td>Frekuensi</td>
+          </tr>
+        </thead>
+        <tbody id="odTabelTunggalIsi">
+          <tr id="odRowTunggal1">
+            <td><input type="text" class="grafikRVT" id="odRowVariabelTunggal1" name="" value="" placeholder="Isi Variabel"></td>
+            <td><input type="number" class="grafikRFT" id="odRowFrekuensiTunggal1" step="1" min="0" name="" value="" placeholder="Isi Frekuensi"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><button id="odTambahRowTunggal">Tambah Data</button></td>
+            <td><button id="odHapusRowTunggal" disabled="true">Hapus Data</button></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    </li>
+     <!-- Pilih olahan -->
+    <a id="mulaiPOD" style="text-align: right;">Buka Pilihan Olahan Data &nbsp; <i class="f7-icons">chevron_down</i></a>
+    <a id="tutupPOD" style="display: none; text-align: right;">Tutup Pilihan Olahan Data &nbsp; <i class="f7-icons">chevron_up</i></a>
+    <div id="od-topik-materi" style="display: none;">
+    <input type="checkbox" id="odDF" name="od-materi" value="odDF" checked>Distribusi Frekuensi<br>
+    <input type="checkbox" id="odGrafik" name="od-materi" value="odGrafik" checked>Grafik<br>
+    <input type="checkbox" id="odUKP" name="od-materi" value="odUKP" checked>Ukuran Pemusatan Data<br>
+    <div id="kuantiChb">
+    <input type="checkbox" id="odUL" name="od-materi" value="odUL" checked>Ukuran Lokasi<br>
+    <input type="checkbox" id="odUPD" name="od-materi" value="odUPD" checked>Ukuran Penyebaran Data<br>
+    </div>
+    </div>
+    <!-- sudah tahu frekuensi, berkelompok -->
+    <li>
+    <div style="display:none" id="odTabelKelompok">
+      <table class="odTabelKelompok">
+        <thead>
+          <tr>
+            <td>Variabel</td>
+            <td>Frekuensi</td>
+          </tr>  
+        </thead>
+        <tbody id="odTabelKelompokIsi">
+          <tr id="odRowKelompok1">
+            <td><input type="text" class="grafikRVT" id="odRowVariabelKelompok1" name="" value="" placeholder="Isi Variabel"></td>
+            <td><input type="number" class="grafikRFT" id="odRowFrekuensiKelompok1" step="1" min="0" name="" value="" placeholder="Isi Frekuensi"></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <td><button id="odTambahRowKelompok">Tambah Data</button></td>
+          <td><button id="odHapusRowKelompok" disabled="true">Hapus Data</button></td>
+        </tfoot>
+      </table>
+    </div>
+    </li>
+  </li> <!-- li masukan data-->
+  <!-- Penyelesaian -->
+  <li><button id="odKerjakan">Kerjakan</button></li>
+  <li id="odJudulDF" style="display: none; color: #325d79;"><h3>DistribusiFrekuensi</h3></li>
+  <div class="odLangkahPengerjaan" id="odLangkahPengerjaan"></div>
+  <!-- PENGERJAAN UKURAN PEMUSATAN DATA -->
+  <li id="odJudulMean" style="display: none; color: #325d79;"><h3>Mean</h3></li>
+  <div class="odMeanLangkahPengerjaan" id="odMeanLangkahPengerjaan"></div>
+
+  <li id="odJudulMedian" style="display: none; color: #325d79;"><h3>Median</h3></li>
+  <div class="odMedianLangkahPengerjaan" id="odMedianLangkahPengerjaan"></div>
+
+  <li id="odJudulModus" style="display: none; color: #325d79;"><h3>Modus</h3></li>
+  <div class="odModusLangkahPengerjaan" id="odModusLangkahPengerjaan"></div>
+
+  <!-- PENGERJAAN UKURAN LOKASI -->
+  <li id="odJudulKuartil" style="display: none; color: #325d79;"><h3>Kuartil</h3></li>
+  <div class="odKuartilLangkahPengerjaan" id="odKuartilLangkahPengerjaan"></div>
+
+  <li id="odJudulDesil" style="display: none; color: #325d79;"><h3>Desil</h3></li>
+  <div class="odDesilLangkahPengerjaan" id="odDesilLangkahPengerjaan"></div>
+
+  <li id="odJudulPersentil" style="display: none; color: #325d79;"><h3>Persentil</h3></li>
+  <div class="odPersentilLangkahPengerjaan" id="odPersentilLangkahPengerjaan"></div>
+
+   <!-- PENGERJAAN UKURAN PENYEBARAN DATA -->
+  <li id="odJudulVarian" style="display: none; color: #325d79;"><h3>Varian</h3></li>
+  <div class="odVarianLangkahPengerjaan" id="odVarianLangkahPengerjaan"></div>
+
+  <li id="odJudulSD" style="display: none; color: #325d79;"><h3>Standar Deviasi</h3></li>
+  <div class="odSDLangkahPengerjaan" id="odSDLangkahPengerjaan"></div>
+  <!-- PENGERJAAN GRAFIK -->
+  <li id="odJudulGrafik" style="display: none; color: #325d79;"><h3>Grafik</h3></li>
+    <!-- MUNCUL GAMBAR GRAFIK -->
+  <li class="od-grafik-kuanti" style="display:none;">
+    <div id="od-grafik-histo">
+      <h3 style="display: none;" id="odJudulHisto">Histogram</h3>
+      <div class="odHistoChart" id="odHistoChart"></div>
+      <div class="odHistoLangkahPengerjaan" id="odHistoLangkahPengerjaan"></div>
+    </div>
+    <div id="od-grafik-poligon">
+      <h3 style="display: none;" id="odJudulPoligon">Poligon</h3>
+      <div class="odPoligonChart" id="odPoligonChart"></div>
+      <div class="odPoligonLangkahPengerjaan" id="odPoligonLangkahPengerjaan"></div>
+    </div>
+  </li>
+
+  <li class="od-grafik-kuali">
+    <div id="od-grafik-lingkaran">
+      <h3 style="display: none;" id="odJudulLingkaran">Lingkaran</h3>
+      <div class="odLingkaranChart" id="odLingkaranChart"></div>
+      <div class="odLingkaranLangkahPengerjaan" id="odLingkaranLangkahPengerjaan"></div>
+    </div>
+    <div id="od-grafik-batang">
+      <h3 style="display: none;" id="odJudulBatang">Batang</h3>
+      <div class="odBatangChart" id="odBatangChart"></div>
+      <div class="odBatangLangkahPengerjaan" id="odBatangLangkahPengerjaan"></div>
+    </div>
+  </li>
+  <br><br><br>
+  </ul>
+  </div>
+  <!-- Navigation -->
+  <div class="back-to-top">
+    <i class="f7-icons" id="back-to-top-od">arrow_up_round_fill</i>
+  </div>
+<!-- div wadah padding -->
+</div>
+</div>
+</div> <!-- div page-content -->
+</div> <!-- div page

@@ -1,0 +1,169 @@
+/*CSS yang digunakan*/
+body {	
+	font-family: "montserrat", serif;
+	text-transform: none;
+}
+button { 
+	font-size: inherit;
+	text-transform: uppercase;
+}
+html {
+	font-size: calc(1em + 1vw);
+}
+h1 { 
+	font-size: 2em; 
+}
+h2 { 
+	font-size: 1.4em; 
+	margin-bottom: -0.5%;
+	color: #325d79;
+}
+h3 { 
+	font-size: 1.2em; 
+	margin-bottom: -0.5%; margin-top: -0.5%;
+}
+img {
+	width: 50%; padding-left:25%; padding-top: 5%; padding-bottom: 5%;
+}
+input { 
+	font-size: inherit 
+}
+p {
+	font-size: calc(1em + 1vw);
+}
+textarea {
+	border: 1px solid gray;
+	width: 98%;
+}
+.back-to-top {
+	/*z-index: muncul paling atas*/
+	position:fixed; bottom:3%; right:3%; background-color:#FFFFFF; z-index:1000;
+}
+.demo-swiper .swiper-slide {
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+.demo-swiper .swiper-slide {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.demo-swiper {
+  margin: 0px 0 35px;
+  font-size: 18px;
+  height: 120px;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide {
+  width: 85%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(2n) {
+  width: 70%;
+}
+.demo-swiper.demo-swiper-auto .swiper-slide:nth-child(3n) {
+  width: 30%;
+}
+.dfLangkahPengerjaan img{
+	width: 75%; padding-left: 12.5%; padding-top: 0px; padding-bottom: 0px;
+}
+.dfMasukanData table{
+	border: 1px solid gray;
+}
+.dfTabelHasil td {
+	padding-left: 0.3%; padding-right: 0.1%; width: auto;
+}
+.hamburger-menu {
+	/*background:#f7f7f8; */
+	background:#9cb806; 
+}
+.hamburger-menu a{
+	color: white; text-decoration: none;
+}
+.ikonChevron i{
+	font-size: calc(1em + 1vw);
+}
+.paddingPengelompokanDF ul{
+	padding-left: 4%;
+}
+.paddingPengelompokanDF ul>li {
+	list-style-type: none;
+	padding-bottom: 1.5%;
+	text-align: justify;	
+}
+.title>div>h4  {
+	padding: none;
+	text-align: left;
+}
+#back-to-top, #back-to-top-od, #back-to-top-cp {
+	font-size: 8vh; padding: 0.1vh; color: gray;
+}
+
+#daftar-isi ol {
+	margin-bottom: 0px; padding-left: 2vh;	
+}
+#daftar-isi ul,li {
+	padding-bottom: 1%; padding-left: 0px;
+
+}
+#daftar-isi ul>li {
+	list-style-type: none;
+	padding-bottom: 1%;
+}
+#df-radio, #histo-radio {
+	list-style-type: none;
+}
+#dfLangkahPengerjaan, #histoLangkahPengerjaan, #poligonLangkahPengerjaan, #scatterLangkahPengerjaan, 
+#lingkaranLangkahPengerjaan, #batangLangkahPengerjaan, #sbsLangkahPengerjaan, #meanLangkahPengerjaan,
+#medianLangkahPengerjaan, #modusLangkahPengerjaan, #kuartilLangkahPengerjaan, #desilLangkahPengerjaan, 
+#persentilLangkahPengerjaan, #varianLangkahPengerjaan, #sdLangkahPengerjaan ul {
+    padding-left: 1%;
+}
+#dfLangkahPengerjaan, #histoLangkahPengerjaan, #poligonLangkahPengerjaan, #scatterLangkahPengerjaan, 
+#lingkaranLangkahPengerjaan, #batangLangkahPengerjaan, #sbsLangkahPengerjaan, #meanLangkahPengerjaan,
+#medianLangkahPengerjaan, #modusLangkahPengerjaan, #kuartilLangkahPengerjaan, #desilLangkahPengerjaan, 
+#persentilLangkahPengerjaan, #varianLangkahPengerjaan, #sdLangkahPengerjaan li {
+	list-style-type: none;
+	padding-bottom: 1.5%;
+	text-align: justify;	
+}
+#gambarGrafik {
+	width: 100%; padding:0px;
+}
+.nomor-ls ul {
+  list-style-type: none;
+  margin: 0%;
+}
+.nomor-ls li {
+  display: inline;
+}
+.nomor-ls a {
+	font-size: 1.2em; 
+	margin-bottom: -0.5%; margin-top: -0.5%;
+	padding: 1% 4%;
+}
+#odPoligonJudul, #odPoligonLangkahPengerjaan li {
+	list-style-type: none;
+	padding-bottom: 1.5%;
+	text-align: justify;	
+}
+#penjelasan-materi div {
+	padding-top: 0px;
+}
+#penjelasan-materi, #penjelasan-cara-penggunaan, #lsPilihTopik, #ruPilihTopik h2 {
+    margin-top: 0px;
+}
+#penjelasan-materi, #penjelasan-cara-penggunaan, #lsPilihTopik, #ruPilihTopik, #konten-pengaturan ul {
+    padding-left: 0%;
+}
+#penjelasan-materi, #penjelasan-cara-penggunaan, #lsPilihTopik, #ruPilihTopik, #konten-pengaturan ul>li {
+	list-style-type: none;
+	padding-bottom: 1.5%;
+	text-align: justify;	
+}
+#wadahSoal, #wadahLSAkhir {
+	padding-left: 1.5%;
+}
